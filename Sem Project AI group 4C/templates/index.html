@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Group 4 AI</title>
+ 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <nav class="nav">
+    <h1>
+      Intern Salary Payment 
+    </h1>
+  </nav>
+ <div class="form">
+	<h1>Input your values </h1>
+
+  <br>
+  <br>
+
+
+     
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="experience" placeholder="Years Of Experience" required="required" />
+        <input type="text" name="test_score" placeholder="GPA" required="required" />
+		<input type="text" name="interview_score" placeholder="Interview Score" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Calculate</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
